@@ -34,15 +34,14 @@ console.log("lowerCaseAnswers: ", lowerCaseAnswers);
 // ["How often can I use <header>? - As often as you like.", ...]
 
 const questionsAndAnswersTogether = cards.map((card) => {
-  return card.question + combination.answer;
+  return card.question + card.answer;
 });
 console.log("Question and Answer together: ", questionsAndAnswersTogether);
 
 // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
 
 const questionAndAnswer = cards.map((card) => {
-  return (card.question =
-    answerAfterQuestion.question + ", answer: " + answerAfterQuestion.answer);
+  return (card.question = card.question + ", answer: " + card.answer);
 });
 console.log("Answer after Question: ", questionAndAnswer);
 
